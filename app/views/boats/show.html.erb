@@ -15,5 +15,10 @@
   <%= @boat.location %>
 </p>
 
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @boat.image.url(:medium) %>
+</p>
+
 <%= link_to 'Edit', edit_boat_path(@boat) %> |
 <%= link_to 'Back', boats_path %>
