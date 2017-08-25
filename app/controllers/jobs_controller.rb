@@ -1,16 +1,15 @@
 class JobsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_job, only: [:show, :edit, :update, :destroy]
 
   def index
-    @jobs = current_user.jobs.all
+    @jobs = Job.all
   end
 
   def show
   end
 
   def new
-    @job = current_user.jobs.new
+    @job = Job.new
   end
 
   def edit
@@ -58,6 +57,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:name, :description, :origin, :destination, :cost, :containers)
+      params.require(:job).permit(:user_id, :name, :description, :origin, :destination, :cost, :containers)
     end
 end

@@ -9,16 +9,15 @@
   </head>
 
   <body>
-    
+
     <p class="alert"><%= alert %></p>
 
     <ul>
-      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Dashboard", root_path %></li>
 
       <li><%= link_to "New Boat", new_boat_path %></li>
       <li><%= link_to "New Job", new_job_path %></li>
-      <li><%= link_to "My Profile", current_user %></li>
-      <li><%= link_to "My Jobs", jobs_path %></li>
+      <li><%= link_to "Jobs", jobs_path %></li>
       <li><%= link_to "My Boats", boats_path %></li>
       <br><br>
       <li><%= link_to "Sign In", new_user_session_path %></li>
