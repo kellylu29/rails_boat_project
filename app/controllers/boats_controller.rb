@@ -1,5 +1,4 @@
 class BoatsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_boat, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -10,7 +9,7 @@ class BoatsController < ApplicationController
   end
 
   def new
-    @boat = current_user.boats.new
+    @boat = Boat.new
   end
 
   def edit
@@ -58,6 +57,6 @@ class BoatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def boat_params
-      params.require(:boat).permit(:name, :containers, :location, :image)
+      params.require(:boat).permit(:user_id, :name, :containers, :location, :image)
     end
 end
