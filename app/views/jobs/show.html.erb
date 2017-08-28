@@ -1,5 +1,5 @@
+<h1>View Job</h1>
 <p id="notice"><%= notice %></p>
-<br>
 <p><strong>Name:</strong><%= @job.name %></p>
 
 <p><strong>Description:</strong><%= @job.description %></p>
@@ -28,7 +28,7 @@
   <%= form_for @job do |f| %>
     <%= f.hidden_field :boat_id, value: boat.id %>
 
-    <%= button_to 'Add to Job', @job, method: :put, data: { confirm: 'Are you sure?' } %>
+    <span id="addBtn"><%= button_to 'Add to Job', @job, method: :put, remote: true, data: { confirm: 'Are you sure?' } %></span>
   <% end %>
 
   <hr>
