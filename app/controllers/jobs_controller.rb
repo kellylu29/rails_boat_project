@@ -6,9 +6,11 @@ class JobsController < ApplicationController
   end
 
   def show
+    @boat = Boat.new
   end
 
   def new
+    @boat = Boat.new
     @job = Job.new
   end
 
