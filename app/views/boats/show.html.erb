@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @boat.name %>
+</p>
+
+<p>
+  <strong>Containers:</strong>
+  <%= @boat.containers %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @boat.location %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @boat.image.url(:medium) %>
+</p>
+
+<%= link_to 'Edit', edit_boat_path(@boat) %> |
+<%= link_to 'Back', boats_path %>

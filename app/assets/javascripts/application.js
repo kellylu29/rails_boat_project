@@ -13,3 +13,12 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+var jobStat = document.getElementById('status')
+var jobBtn = document.getElementById('jobBtn')
+
+if (jobStat.innerText === ""){
+  jobStat.innerHTML = " Open"
+} else {
+  jobStat.innerHTML = " Closed"
+  jobBtn.disabled = true
+}
