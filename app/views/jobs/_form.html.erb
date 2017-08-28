@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :origin %>
-    <%= form.text_field :origin, id: :job_origin %>
+    <%= form.select :origin, ['CA', 'FL', 'LA', 'MD', 'NC', 'NJ', 'NY', 'PA', 'SC', 'TX', 'WA'] %>
   </div>
 
   <div class="field">
     <%= form.label :destination %>
-    <%= form.text_field :destination, id: :job_destination %>
+    <%= form.select :destination, ['CA', 'FL', 'LA', 'MD', 'NC', 'NJ', 'NY', 'PA', 'SC', 'TX', 'WA'] %>
   </div>
 
   <div class="field">
