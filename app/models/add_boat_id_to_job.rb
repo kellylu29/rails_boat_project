@@ -1,0 +1,2 @@
+class AddBoatIdToJob < ApplicationRecord
+end

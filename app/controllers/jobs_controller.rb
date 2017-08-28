@@ -6,11 +6,11 @@ class JobsController < ApplicationController
   end
 
   def show
-    @boat = Boat.new
+    @boats = current_user.boats
+    @boat = Boat.find_by_id(params[:boat_id])
   end
 
   def new
-    @boat = Boat.new
     @job = Job.new
   end
 
@@ -59,6 +59,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:user_id, :name, :description, :origin, :destination, :cost, :containers)
+      params.require(:job).permit(:user_id, :boat_id, :name, :description, :origin, :destination, :cost, :containers)
     end
 end
