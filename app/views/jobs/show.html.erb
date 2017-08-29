@@ -1,35 +1,41 @@
-<h1>View Job</h1>
-<p id="notice"><%= notice %></p>
-<p><strong>Name:</strong> <%= @job.name %></p>
+<div class="post_content">
+  <div class="submit_info">
+    <h1>View Job</h1>
+    <p id="notice"><%= notice %></p>
+    <p><strong>Name:</strong> <%= @job.name %></p>
 
-<p><strong>Description:</strong> <%= @job.description %></p>
+    <p><strong>Description:</strong> <%= @job.description %></p>
 
-<p><strong>Origin:</strong> <%= @job.origin %></p>
+    <p><strong>Origin:</strong> <%= @job.origin %></p>
 
-<p><strong>Destination:</strong> <%= @job.destination %></p>
+    <p><strong>Destination:</strong> <%= @job.destination %></p>
 
-<p><strong>Cost:</strong> <%= @job.cost %></p>
+    <p><strong>Cost:</strong> <%= @job.cost %></p>
 
-<p><strong>Containers:</strong> <%= @job.containers %></p>
+    <p><strong>Containers:</strong> <%= @job.containers %></p>
 
-<p><strong>Job Status:</strong><span id="status"> <%= @job.boat_id %></span></p>
+    <p><strong>Job Status:</strong><span id="status"> <%= @job.boat_id %></span></p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+    <%= link_to 'Edit', edit_job_path(@job) %> |
+    <%= link_to 'Back', jobs_path %>
+  </div>
 
-<br><br>
-<h2>Add a Boat</h2>
-<% @boats.each do |boat| %>
-  <p><strong>Name:</strong> <%= boat.name %></p>
-  <p><strong>Containers:</strong> <%= boat.containers %></p>
-  <p><strong>Location:</strong> <%= boat.location %></p>
-  <p><strong>Image:</strong><%= image_tag boat.image.url(:medium) %></p>
+  <br><br>
+  <div class="addBoat_info">
+    <h2>Add a Boat</h2>
+    <% @boats.each do |boat| %>
+      <p><strong>Name:</strong> <%= boat.name %></p>
+      <p><strong>Containers:</strong> <%= boat.containers %></p>
+      <p><strong>Location:</strong> <%= boat.location %></p>
+      <p><strong>Image:</strong><%= image_tag boat.image.url(:medium) %></p>
 
-  <%= form_for @job do |f| %>
-    <%= f.hidden_field :boat_id, value: boat.id %>
+      <%= form_for @job do |f| %>
+        <%= f.hidden_field :boat_id, value: boat.id %>
 
-    <span id="addBtn"><%= button_to 'Add to Job', @job, method: :put, remote: true, data: { confirm: 'Are you sure?' } %></span>
-  <% end %>
+        <span id="addBtn"><%= button_to 'Add to Job', @job, method: :put, remote: true, data: { confirm: 'Are you sure?' } %></span>
+      <% end %>
 
-  <hr>
-<% end %>
+      <hr>
+    <% end %>
+  </div>
+</div>

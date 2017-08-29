@@ -24,13 +24,15 @@
         <td><%= job.destination %></td>
         <td><%= job.cost %></td>
         <td><%= job.containers %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <li class="jobTab"><%= link_to 'Show', job %></li>
+        <li class="jobTab"><%= link_to 'Edit', edit_job_path(job) %></li>
+        <li class="jobTab"><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></li>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'New Job', new_job_path %>
+<div class="newBtn">
+  <%= link_to 'New Job', new_job_path %>
+</div>

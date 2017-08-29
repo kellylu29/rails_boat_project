@@ -18,13 +18,15 @@
         <td><%= boat.name %></td>
         <td><%= boat.containers %></td>
         <td><%= boat.location %></td>
-        <td><%= link_to 'Show', boat %></td>
-        <td><%= link_to 'Edit', edit_boat_path(boat) %></td>
-        <td><%= link_to 'Destroy', boat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <li class="jobTab"><%= link_to 'Show', boat %></li>
+        <li class="jobTab"><%= link_to 'Edit', edit_boat_path(boat) %></li>
+        <li class="jobTab"><%= link_to 'Destroy', boat, method: :delete, data: { confirm: 'Are you sure?' } %></li>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<%= link_to 'New Boat', new_boat_path %>
+<div class="newBtn">
+  <%= link_to 'New Boat', new_boat_path %>
+</div>

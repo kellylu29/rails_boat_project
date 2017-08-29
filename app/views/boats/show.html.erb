@@ -4,21 +4,27 @@
   <strong>Name:</strong>
   <%= @boat.name %>
 </p>
+<br>
 
 <p>
   <strong>Containers:</strong>
   <%= @boat.containers %>
 </p>
+<br>
 
 <p>
   <strong>Location:</strong>
   <%= @boat.location %>
 </p>
+<br>
 
 <p>
   <strong>Image:</strong>
   <%= image_tag @boat.image.url(:medium) %>
 </p>
+<br>
 
-<%= link_to 'Edit', edit_boat_path(@boat) %> |
-<%= link_to 'Back', boats_path %>
+<div class="showBtn">
+  <%= link_to 'Edit', edit_boat_path(@boat) %> |
+  <%= link_to 'Back', boats_path %>
+</div>
