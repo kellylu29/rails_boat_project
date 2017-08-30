@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="text_field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :boat_name %>
   </div>
 
-  <div class="field">
+  <div class="num_field">
     <%= form.label :containers %>
     <%= form.number_field :containers, id: :boat_containers %>
   </div>
 
-  <div class="field">
+  <div class="location_field">
     <%= form.label :location %>
     <%= form.select :location, ['CA', 'FL', 'LA', 'MD', 'NC', 'NJ', 'NY', 'PA', 'SC', 'TX', 'WA'] %>
   </div>
