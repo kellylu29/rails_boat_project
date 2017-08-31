@@ -1,36 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="jobTable">
+  <p id="notice"><%= notice %></p>
 
-<h1>Jobs</h1>
+  <h1>Jobs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Origin</th>
-      <th>Destination</th>
-      <th>Cost</th>
-      <th>Containers</th>
-      <th colspan="7"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @jobs.each do |job| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= job.name %></td>
-        <td><%= job.description %></td>
-        <td><%= job.origin %></td>
-        <td><%= job.destination %></td>
-        <td><%= job.cost %></td>
-        <td><%= job.containers %></td>
-        <td><%= link_to 'Show', job %></td>
-        <td><%= link_to 'Edit', edit_job_path(job) %></td>
-        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Cost</th>
+        <th>Containers</th>
+        <th colspan="7">Links</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-<%= link_to 'New Job', new_job_path %>
+    <tbody>
+      <% @jobs.each do |job| %>
+        <tr>
+          <td><%= job.name %></td>
+          <td><%= job.description %></td>
+          <td><%= job.origin %></td>
+          <td><%= job.destination %></td>
+          <td><%= job.cost %></td>
+          <td><%= job.containers %></td>
+          <td><%= link_to 'Show', job %>
+              <%= link_to 'Edit', edit_job_path(job) %>
+              <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <%= link_to 'New Job', new_job_path %>
+</div>
