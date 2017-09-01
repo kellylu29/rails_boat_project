@@ -14,11 +14,14 @@
 //= require turbolinks
 //= require_tree .
 var jobStat = document.getElementById('status')
-var jobBtn = document.getElementById('jobBtn')
+var addBtn = document.getElementById('addBtn')
 
-if (jobStat.innerText === ""){
+if (jobStat.innerText === "") {
   jobStat.innerHTML = " Open"
 } else {
   jobStat.innerHTML = " Closed"
-  jobBtn.disabled = true
+}
+
+if (jobStat.innerHTML === " Closed"){
+  addBtn.disabled = true
 }

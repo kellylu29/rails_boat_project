@@ -14,12 +14,12 @@
   <div class="user-jobs">
     <h2>My Jobs</h2>
     <% @jobs.each do |job| %>
-      <p><strong>Name:</strong><%= job.name %></p>
-      <p><strong>Description:</strong><%= job.description %></p>
-      <p><strong>Origin:</strong><%= job.origin %></p>
-      <p><strong>Destination:</strong><%= job.destination %></p>
-      <p><strong>Cost:</strong><%= job.cost %></p>
-      <p><strong>Containers:</strong><%= job.containers %></p>
+      <p><strong>Name:</strong> <%= job.name %></p>
+      <p><strong>Description:</strong> <%= job.description %></p>
+      <p><strong>Origin:</strong> <%= job.origin %></p>
+      <p><strong>Destination:</strong> <%= job.destination %></p>
+      <p><strong>Cost:</strong> <%= job.cost %></p>
+      <p><strong>Containers:</strong> <%= job.containers %></p>
       <p><%= link_to 'Show Job', job %></p>
       <hr>
     <% end %>
