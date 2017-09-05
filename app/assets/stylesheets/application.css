@@ -14,18 +14,22 @@
  *= require_self
  */
 
+ html{
+   background-image: url('/boats/cargo1.jpg');
+   background-size: cover;
+   background-attachment: fixed;
+ }
+
  body {
    margin: 0;
-   background-image: url('/boats/PatriceWHALES.jpg');
-   background-size: cover;
    /*opacity: 0.5;*/
    top: 0;
    left: 0;
    bottom: 0;
    right: 0;
-   position: absolute;
    /*z-index: -1;
    width: 583;*/
+   font-family: Helvetica, sans-serif;
  }
 
  ul {
