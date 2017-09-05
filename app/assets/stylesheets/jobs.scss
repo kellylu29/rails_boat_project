@@ -5,3 +5,84 @@
 .jobTable {
   background-image: url("cargoShip.jpg");
 }
+
+.boat_job_form {
+  width: 40%;
+  margin: 40px auto;
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  line-height: 175%;
+
+  h2 {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    color: #C22A42;
+  }
+}
+
+//The form elements
+form {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form_links {
+  text-align: center;
+  margin: 10px;
+  font-style: italic;
+
+  a {
+    padding: 5px;
+    text-decoration: none;
+    color: #333;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+#job_name, #job_description, #job_cost, #job_containers, select {
+  width: 85%;
+  height: 30px;
+  font-size: 1em;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+#job_description {
+  height: 70px;
+}
+
+.submit_button {
+  width: 40%;
+  height: 35px;
+  margin-top: 10px;
+  color: #fff;
+  background-color: rgba(194, 42, 66, 0.8);
+  border: none;
+  font-size: .75em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover{
+    background-color: transparent;
+    border: 1px solid grey;
+    color: #333;
+  }
+}
+
+.image_field {
+  width: 100%;
+
+  input[type="file"] {
+    width: 60%;
+    margin: 0 auto;
+    position: static;
+  }
+}
