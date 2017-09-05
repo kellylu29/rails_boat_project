@@ -20,6 +20,15 @@
    background-attachment: fixed;
  }
 
+.alert {
+  text-align: center;
+  font-weight: bold;
+  margin: 0 auto;
+  padding-top: 20px;
+  color: #C22A42;
+  font-style: italic;
+}
+
  body {
    margin: 0;
    /*opacity: 0.5;*/
