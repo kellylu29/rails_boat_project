@@ -20,6 +20,20 @@
   }
 }
 
+table.results {
+    max-width: 50%;
+    border: .2em ridge #000000;
+
+    // border-collapse: collapse;
+  }
+  th, td.limit
+  {
+    width:50%;
+    background-color: #fff000;
+    border: .2em ridge #0f0f0f;
+    table-layout: auto;
+  }
+
 //The form elements
 form {
   text-align: center;

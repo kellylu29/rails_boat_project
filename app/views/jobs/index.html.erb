@@ -3,29 +3,29 @@
 
   <h1>Jobs</h1>
 
-  <table>
+  <table class="results">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Origin</th>
-        <th>Destination</th>
-        <th>Cost</th>
-        <th>Containers</th>
-        <th colspan="7">Links</th>
+        <th class="limit"><h2>Name</h2></th>
+        <th class="limit"><h2>Description</h2></th>
+        <th class="limit"><h2>Origin</h2></th>
+        <th class="limit"><h2>Destination</h2></th>
+        <th class="limit"><h2>Cost</h2></th>
+        <th class="limit"><h2>Containers</h2></th>
+        <th class="limit" colspan="7"><h2>Links</h2></th>
       </tr>
     </thead>
 
     <tbody>
       <% @jobs.each do |job| %>
         <tr>
-          <td><%= job.name %></td>
-          <td><%= job.description %></td>
-          <td><%= job.origin %></td>
-          <td><%= job.destination %></td>
-          <td><%= job.cost %></td>
-          <td><%= job.containers %></td>
-          <td><%= link_to 'Show', job %>
+          <td class="limit"><%= job.name %></td>
+          <td class="limit"><%= job.description %></td>
+          <td class="limit"><%= job.origin %></td>
+          <td class="limit"><%= job.destination %></td>
+          <td class="limit"><%= job.cost %></td>
+          <td class="limit"><%= job.containers %></td>
+          <td class="limit"><%= link_to 'Show', job %>
               <%= link_to 'Edit', edit_job_path(job) %>
               <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>

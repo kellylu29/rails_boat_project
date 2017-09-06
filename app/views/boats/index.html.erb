@@ -2,25 +2,25 @@
 
 <h1>Boats</h1>
 
-<table>
+<table class="results">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Containers</th>
-      <th>Location</th>
-      <th colspan="4"></th>
+      <th class="limit">Name</th>
+      <th class="limit">Containers</th>
+      <th class="limit">Location</th>
+      <th class="limit" colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @boats.each do |boat| %>
       <tr>
-        <td><%= boat.name %></td>
-        <td><%= boat.containers %></td>
-        <td><%= boat.location %></td>
-        <td><%= link_to 'Show', boat %></td>
-        <td><%= link_to 'Edit', edit_boat_path(boat) %></td>
-        <td><%= link_to 'Destroy', boat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="limit"><%= boat.name %></td>
+        <td class="limit"><%= boat.containers %></td>
+        <td class="limit"><%= boat.location %></td>
+        <td class="limit"><%= link_to 'Show', boat %>
+          <%= link_to 'Edit', edit_boat_path(boat) %>
+          <%= link_to 'Destroy', boat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
