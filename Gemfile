@@ -9,7 +9,7 @@ gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -52,7 +52,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'sqlite3', group: :development
+# gem 'sqlite3', group: :development
 gem 'pg', '0.18.1', group: :production
 gem 'rails_12factor', group: :production
 
